@@ -1,0 +1,359 @@
+/* Reset some default styles and apply a basic background color */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+    background-color: #CC0A2F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo styles */
+.logo img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* Site Name styles */
+.site-name {
+    text-align: left;
+    margin-left: 3%;
+}
+
+.site-name h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+
+/* Navigation Bar styles */
+nav {
+    background-color: #CC0A2F;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 25px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 50px;
+    transition: background-color 0.3s;
+
+}
+
+/* Add styles for the icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+nav a:hover {
+    background-color: #84071e;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main Content styles */
+main {
+    padding: 20px;
+}
+
+
+/* Center-align the tool boxes and set them to display inline-block */
+.tools {
+    text-align: center;
+}
+
+/* Tool Box styles */
+.tool-box,
+.tipp-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+    /* Align boxes to the top within the line */
+    width: 300px;
+    margin: 10px;
+}
+
+.tool-box h2,
+.tipp-box h2 {
+    font-size: 1.5rem;
+}
+
+.tool-box p {
+    margin-top: 10px;
+}
+
+/* Read More button styles */
+.read-more {
+    background-color: #CC0A2F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #84071e;
+}
+
+
+
+
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Set the width of the links to match the min-width */
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #000;
+    margin-left: 0%;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* Style the hamburger icon button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin-left: 40%;
+    float: right;
+
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 190px;
+    transition: 0.4s;
+}
+
+
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #CC0A2F;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+/* Media Queries for Mobile Navigation */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .site-name h1 {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        background-color: #CC0A2F;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        transition: left 0.3s;
+    }
+
+    nav.show {
+        left: 0;
+        display: block;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 25px;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 20px 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        transition: background-color 0.3s;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav a:hover {
+        background-color: #84071e;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .tool-box,
+    .tipp-box {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .tool-box h2,
+    .tipp-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .tool-box p {
+        margin-top: 8px;
+    }
+
+    .read-more {
+        padding: 10px 0;
+    }
+}
+
+/* Media Queries for iPad Air display */
+@media (max-width: 820px) and (max-height: 1181px) {
+    nav {
+        display: block;
+        background-color: #CC0A2F;
+        color: #fff;
+        text-align: center;
+        position: static;
+        width: 80%;
+        height: auto;
+        overflow-y: auto;
+        transition: left 0.3s;
+    }
+
+    nav ul {
+        padding: 25px;
+    }
+
+    nav li {
+        margin: 20px 0;
+    }
+
+    nav a {
+        padding: 5px 10px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}
+
+/* Media Queries for specific screen resolutions */
+@media (min-width: 820px) and (max-width: 1180px) {
+    /* Adjust styles for screens in the range 820px to 1180px width */
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    /* Adjust styles for screens in the range 1024px to 1366px width */
+}
+
+@media (min-width: 912px) and (max-height: 1368px) {
+    /* Adjust styles for screens in the range 912px to 1368px height */
+}
+
+@media (width: 1024px) and (height: 600px) {
+    /* Adjust styles for screens with a specific resolution of 1024x600 */
+}
