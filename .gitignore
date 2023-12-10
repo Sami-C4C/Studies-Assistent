@@ -1,0 +1,8 @@
+# Ignore all files in the env directory
+env/
+
+# Ignore .env files containing environment variables
+.env
+
+# Ignore API key files
+api-key
