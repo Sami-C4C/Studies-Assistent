@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+    <title>Studis-Assistent - Tools</title>
+</head>
+
+<body>
+
+{% include 'quizzes/header.html' %}
+
+<!-- Navigation Bar -->
+<!-- <nav>
+    <ul>
+        <li>
+            <a href="index.html">
+                <img src="icons/home.png" alt="Home Icon" class="icon">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="KI-Helfer.html">
+                <img src="icons/AI.png" alt="AI Icon" class="icon">
+                KI-Helfer
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="wissenschaftliche_arbeit.html" class="dropbtn">
+                <img src="icons/WA.png" alt="WA Icon" class="icon">
+                Wissenschaftliches Arbeiten
+            </a>
+            <div class="dropdown-content">
+                <a href="tools.html">Tools</a>
+                <a href="tipps.html">Tipps</a>
+                <a href="guidelines.html">Guidelines</a>
+            </div>
+        </li>
+    </ul>
+</nav> -->
+
+{% include 'quizzes/navbar.html' %}
+
+<main>
+    <section class="tools">
+        <div class="tool-box">
+            <h2>ChatGPT</h2>
+            <p>ChatGPT is an advanced language model designed by OpenAI. It excels in natural language understanding
+                and generation. Utilize ChatGPT for interactive conversations and more.</p>
+            <a href="https://chat.openai.com/" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+        <div class="tool-box">
+            <h2>Perplexity</h2>
+            <p>Perplexity AI, a leader in language model evaluation, uses advanced algorithms to assess models'
+                effectiveness by measuring predictive capabilities on diverse text samples.</p>
+            <a href="https://www.perplexity.ai/" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+        <div class="tool-box">
+            <h2>Google Bard</h2>
+            <p>Google Bard is a powerful tool for chat and communication. It provides an efficient platform for
+                collaborative work and communication, making it easy to stay connected with your team.</p>
+            <a href="https://bard.google.com/chat" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+        <div class="tool-box">
+            <h2>KIARA-Assistent</h2>
+            <p>KIARA-Assistent is your go-to platform for academic support. From research assistance to study
+                tips, it offers a range of features to enhance your learning experience.</p>
+            <a href="{% url 'assistent' %}" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+        <div class="tool-box">
+            <h2>Zotero</h2>
+            <p>Zotero erleichtert das Sammeln und Organisieren von Forschungsquellen direkt im Browser, ideal für
+                Gruppenarbeit und Synchronisierung über Geräte hinweg.</p>
+            <a href="https://www.zotero.org/" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+        <div class="tool-box">
+            <h2>Citavi</h2>
+            <p>Citavi bietet umfassende Literaturverwaltung, unterstützt durch Inhaltsanalyse und integrierte
+                Aufgabenplanung, ideal für den gesamten Forschungsprozess.</p>
+            <a href="https://www.citavi.com/de" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+
+    </section>
+</main>
+
+{% include 'quizzes/footer.html' %}
+</body>
+</html>
+
+<script src="{% static 'quizess/js/script.js' %}"></script>
+</body>
+
+</html>

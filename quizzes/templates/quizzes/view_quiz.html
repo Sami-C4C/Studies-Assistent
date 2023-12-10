@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Details</title>
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'quizzes/css/view_quiz.css' %}">
+</head>
+<body>
+{% include 'quizzes/header.html' %}
+{% include 'quizzes/navbar.html' %}
+<h1>Quiz Details</h1>
+<h2>Category: {{ quiz.category }}</h2>
+
+{% for question in quiz.questions.all %}
+<div class="question">
+    <h3>Question {{ forloop.counter }}: {{ question.text }}</h3>
+    <ul>
+        {% for option in question.choices.all %}
+        <li>{{ option.text }} {% if option.is_correct %}(Correct answer){% endif %}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
+<a href="{% url 'saved_quizzes' %}">Back to saved quizzes</a>
+
+<script src="{% static 'quizzes/js/script.js' %}"></script>
+{% include 'quizzes/footer.html' %}
+
+</body>
+</html>

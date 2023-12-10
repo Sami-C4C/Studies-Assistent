@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'quizzes/css/saved_quizzes.css' %}">
+    <title>Saved Quizzes</title>
+</head>
+
+<body>
+{% include 'quizzes/header.html' %}
+{% include 'quizzes/navbar.html' %}
+<div class="saved-quizzes">
+    <h1>Saved Quizzes</h1>
+
+    <!-- Display all saved quizzes -->
+    <ul>
+        {% for quiz in quizzes %}
+        <li>
+            <a href="{% url 'view_quiz' quiz.id %}">{{quiz.id}} : {{ quiz.category }}</a>
+        </li>
+        {% empty %}
+        <li>No saved quizzes yet.</li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% include 'quizzes/footer.html' %}
+<script src="{% static 'quizess/js/script.js' %}"></script>
+
+</body>
+
+
+</html>

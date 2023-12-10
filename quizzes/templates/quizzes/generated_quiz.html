@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load custom_filters %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Quiz</title>
+    <link rel="stylesheet" href="{% static 'quizzes/css/quiz_formular.css' %}">
+    <!-- Fügen Sie hier zusätzliches CSS oder Meta-Tags hinzu, falls erforderlich -->
+</head>
+<body>
+<form id="quizForm" method="post" action="{% url 'saved_quizzes' %}">
+    {% csrf_token %}
+    <h1>Generated Quiz</h1>
+    <h2>Category: {{ category }}</h2>
+
+    {% for question in questions %}
+    <div class="question" data-question-id="{{ question.id }}" data-correct-answer="{{ question.correct_answer_id }}">
+        <p>{{ forloop.counter }}. {{ question.text }}</p>
+        {% for option in question.choices.all %}
+        <label>
+            <input type="radio" name="user_answer_{{ question.id }}"
+                   value="{{ option.id }}"> {{ forloop.counter|add:'96'|chr }}) {{ option.text }}
+        </label><br>
+        {% endfor %}
+        <div class="result" style="display:none;"></div>
+
+    </div>
+    {% endfor %}
+
+    <button type="submit">Submit Quiz</button>
+    <button type="button" onclick="submitAnswers()">Antworten überprüfen</button>
+
+</form>
+<script>
+    function submitAnswers() {
+        var formData = new FormData(document.getElementById('quizForm'));
+        fetch("{% url 'check_answers' quiz.id %}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                data.results.forEach(result => {
+                    let questionDiv = document.querySelector(`div.question[data-question-id="${result.question_id}"]`);
+                    let resultDiv = questionDiv.querySelector('.result');
+                    let correctAnswer = questionDiv.getAttribute('data-correct-answer');
+                    let correctAnswerText = result.correct_text; // Angenommen, Sie senden den Text der korrekten Antwort zurück
+
+                    // Erstellen Sie ein neues Element, um die richtige Antwort und data-correct-answer anzuzeigen
+                    let answerInfo = document.createElement('p');
+                    answerInfo.innerHTML = result.is_correct
+                        ? `Richtig (data-correct-answer="${correctAnswer}")`
+                        : `Falsch, die richtige Antwort ist: ${correctAnswerText} (data-correct-answer="${correctAnswer}")`;
+                    resultDiv.appendChild(answerInfo);
+
+                    resultDiv.style.display = 'block';
+
+                    // Zeigen Sie das Attribut data-correct-answer an
+                    questionDiv.setAttribute('data-correct-answer', correctAnswer);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+
+</script>
+</body>
+</html>

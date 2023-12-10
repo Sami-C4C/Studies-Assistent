@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/quizzes/css/styles.css' %}">
+    <title>Studis-Assistent - Tipps</title>
+</head>
+
+<body>
+
+{% include 'quizzes/header.html' %}
+
+{% include 'quizzes/navbar.html' %}
+
+<main>
+    <section class="tipps">
+        <div class="tipp-box">
+            <h2>Tipp 1: Zeitmanagement</h2>
+            <p> Effektives Zeitmanagement ist entscheidend für akademischen Erfolg. Der Tag, indem Sie
+                einen Zeitplan erstellen und wichtige Fristen im Blick behalten. Nutzen Sie Techniken wie die
+                Pomodoro-Technik, um fokussiert zu bleiben und Pausen sinnvoll einzusetzen.</p>
+            <a href="https://example.com/tipp1" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+        <div class="tipp-box">
+            <h2>Tipp 2: Aktive Teilnahme</h2>
+            <p>Aktive Teilnahme in Vorlesungen und Seminaren durch Fragen und Diskussionen verstärkt das Verständnis und
+                festigt das Gelernte. Gruppenarbeit kann zudem helfen, das Wissen effektiv zu vertiefen und Erfahrungen
+                zu sammeln .</p>
+
+            <a href="https://example.com/tipp2" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+        <div class="tipp-box">
+            <h3>Tipp 3: Gesunde Lebensweise</h3>
+            <p>Eine gesunde Ernährung und regelmäßige Bewegung können Wunder für Ihre mentale Leistungsfähigkeit und Konzentration bewirken. Achten Sie darauf, gesund zu bleiben, genügend Schlaf zu bekommen und Stress durch Meditation oder Yoga zu reduzieren</p>
+            <a href="https://example.com/tipp3" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+        <div class="tipp-box">
+            <h2>Tipp 4: Ressourcennutzung</h2>
+            <p>Nutzen Sie die Ressourcen, die Ihre Hochschule bietet, wie Bibliotheken, Tutorien und Beratungsstellen.
+                Online-Ressourcen wie akademische Datenbanken oder Lernplattformen.</p>
+            <a href="https://example.com/tipp4" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+    </section>
+</main>
+
+{% include 'quizzes/footer.html' %}
+
+<script src="{% static 'quizzes/js/script.js' %}"></script>
+</body>
+
+</html>

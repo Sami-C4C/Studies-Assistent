@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studies-Assistent</title>
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+</head>
+<body>
+
+{% include 'quizzes/header.html' %}
+{% include 'quizzes/navbar.html' %}
+
+<!-- Main Content for Quizzes -->
+<main>
+    <div class="tool-content">
+        <h1>Wilkommen in Studies-Assistent</h1>
+        <!-- Replace the previous paragraph with quiz-related content -->
+        <div class="quiz-container">
+            <h2>Quiz Generator</h2>
+            <p>Generieren Sie quizzes über verschiedene Branchen:</p>
+            <!-- Add form for quiz generation -->
+            <form action="{% url 'generated_quiz' %}" method="post">
+                {% csrf_token %}
+                <!-- Add form input for category -->
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Mathematik">Mathematik</option>
+                    <option value="Programming">Programmierung</option>
+                    <option value="Physik">Physik</option>
+                    <option value="Chemie">Chemie</option>
+                    <option value="Geschichte">Geschichte</option>
+                    <option value="Geographie">Geographie</option>
+                    <option value="IT">IT</option>
+                </select><br><br>
+
+                <!-- Set default values for the number of questions and options -->
+                <input type="hidden" id="num_questions" name="num_questions" value="5">
+                <input type="hidden" id="num_options" name="num_options" value="4">
+
+                <button type="submit">Generate Quiz</button>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+{% include 'quizzes/footer.html' %}
+
+<!-- Include your script at the end of the body -->
+<script src="{% static 'quizess/js/script.js' %}"></script>
+</body>
+</html>

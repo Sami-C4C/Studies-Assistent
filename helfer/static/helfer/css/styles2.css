@@ -1,0 +1,54 @@
+/* styles2.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* So that padding doesn't affect overall width */
+}
+
+form button {
+  padding: 10px 15px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+p {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #d1e7dd;
+  border: 1px solid #badbcc;
+  border-radius: 8px;
+  color: #0f5132;
+}

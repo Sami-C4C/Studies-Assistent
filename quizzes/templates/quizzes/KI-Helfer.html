@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/quizzes/css/styles.css' %}">
+    <title>KI-Helfer</title>
+</head>
+
+<body>
+
+{% include 'quizzes/header.html' %}
+
+{% include 'quizzes/navbar.html' %}
+
+
+<main>
+    <section class="tipps">
+
+        <h1>KI-Helfer</h1>
+        <p>KI-Helfer, kurz für Künstliche Intelligenz Helfer, sind fortschrittliche Softwaretools, die darauf
+            abzielen,<br>
+            Lern- und Forschungsprozesse zu vereinfachen und zu optimieren. Sie bieten personalisierte <br>Unterstützung,
+            um
+            Benutzern dabei zu helfen, Informationen effektiver zu verarbeiten und Wissen schneller zu erlangen.</p><br>
+        <div class="tipp-box">
+            <p>KI-Helfer unterstützen bei akademischen Aufgaben durch automatisierte Analyse und Datenverarbeitung, um
+                effektiver zu lernen und zu forschen.</p>
+            <a href="https://example.com/tipp1" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+        <div class="tipp-box">
+            <p>Mit KI-Helfern können Studierende ihre Produktivität steigern, indem sie Forschungs- und Lernprozesse
+                durch Technologie optimieren.</p>
+            <a href="https://example.com/tipp2" target="_blank">
+                <button class="read-more">Read More</button>
+            </a>
+        </div>
+
+        <div class="tipp-box">
+            <p><b>KIARA</b> Studies-helfer bietet vielfältige akademische Unterstützungen, die das Lernen erleichtern und den
+                Wissenserwerb beschleunigen.</p>
+            <a href="{% url 'studies-helfer' %}" target="_blank">
+                <button class="read-more">Learn More</button>
+            </a>
+        </div>
+
+
+    </section>
+</main>
+
+{% include 'quizzes/footer.html' %}
+
+<script src="{% static 'quizzes/js/script.js' %}"></script>
+
+</body>
+
+</html>

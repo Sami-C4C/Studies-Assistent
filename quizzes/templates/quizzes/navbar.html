@@ -1,0 +1,14 @@
+ <nav class="mobile-menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'helfer' %}">KIARA</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Wissenschaftliches Arbeiten</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'tools' %}">KI-Anwendungen</a>
+                    <a href="{% url 'tipps' %}">Tipps</a>
+                    <a href="{% url 'guidelines' %}">Guidelines</a>
+                </div>
+            </li>
+        </ul>
+    </nav>

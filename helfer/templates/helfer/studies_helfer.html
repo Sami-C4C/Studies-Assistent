@@ -1,0 +1,21 @@
+<!-- helfer/templates/helfer/studies_helfer.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/helfer/css/styles2.css' %}">
+    <title>ChatGPT Helfer</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <label for="question">Frage:</label>
+    <input type="text" name="question" id="question" required>
+    <button type="submit">Frage stellen</button>
+</form>
+{% if response %}
+<p><strong>Antwort:</strong> {{ response }}</p>
+{% endif %}
+</body>
+</html>

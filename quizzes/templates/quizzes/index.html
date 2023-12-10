@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+    <title>Studis-Assistent</title>
+</head>
+
+<body>
+
+{% include 'quizzes/header.html' %}
+{% include 'quizzes/navbar.html' %}
+<!-- Navigation Bar -->
+<!--
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">
+                <img src="icons/home.png" alt="Home Icon" class="icon">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="KI-Helfer.html">
+                <img src="icons/AI.png" alt="AI Icon" class="icon">
+                KI-Helfer
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="wissenschaftliche_arbeit.html" class="dropbtn">
+                <img src="icons/WA.png" alt="WA Icon" class="icon">
+                Wissenschaftliches Arbeiten
+            </a>
+            <div class="dropdown-content">
+                <a href="tools.html">Tools</a>
+                <a href="tipps.html">Tipps</a>
+                <a href="guidelines.html">Guidelines</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+-->
+
+
+<main>
+    <section class="content">
+        <h1>Willkommen beim Studis-Assistent</h1>
+        <p>Der Studis-Assistent ist dein virtueller Begleiter durch das Studium. Mit intelligenten Werkzeugen und <br>
+            maßgeschneiderten Ratschlägen unterstützen wir dich bei der Bewältigung wissenschaftlicher Arbeiten <br> und beim
+            effizienten Lernen. Unser Ziel ist es, dir einen leichteren Zugang zu Wissen zu ermöglichen <br> und deinen
+            Studienalltag optimal zu gestalten.</p>
+        <p>Ob es um die Suche nach relevanten Quellen, das Verfassen von Hausarbeiten oder die Vorbereitung <br> auf
+            Prüfungen geht – hier findest du umfassende Unterstützung. Profitiere von einer Vielzahl an Tools <br> und Tipps,
+            die speziell auf die Anforderungen und Herausforderungen des Studierendenlebens <br> zugeschnitten sind.</p>
+    </section>
+</main>
+
+{% include 'quizzes/footer.html' %}
+<script src="{% static 'quizess/js/script.js' %}"></script>
+</body>
+
+</html>

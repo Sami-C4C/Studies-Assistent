@@ -1,0 +1,45 @@
+<!-- quizzes/check_answers_results.html -->
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Antworten Überprüfung</title>
+    <link rel="stylesheet" href="{% static 'quizzes/css/styles.css' %}">
+</head>
+<body>
+{% include 'quizzes/header.html' %}
+{% include 'quizzes/navbar.html' %}
+
+<main>
+    <h1>Ergebnisse der Quiz-Überprüfung</h1>
+
+    <section>
+        <h2>Ihre Antworten</h2>
+        <ul>
+            {% for submission in user_submissions %}
+            <li>
+                <strong>Frage:</strong> {{ submission.question }}<br>
+                <strong>Ihre Antwort:</strong> {{ submission.selected_option }}<br>
+                <strong>Richtig:</strong> {{ submission.is_correct|yesno:"Ja,Nein" }}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Ihr Ergebnis</h2>
+        <p>Sie haben {{ correct_answers }} von {{ total_questions }} Fragen richtig beantwortet.</p>
+        <p>Ihre Punktzahl: {{ result_percentage }}%</p>
+    </section>
+
+
+    <a href="{% url 'view_quiz' quiz_id %}">Zurück zum Quiz</a>
+</main>
+
+{% include 'quizzes/footer.html' %}
+<script src="{% static 'quizzes/js/script.js' %}"></script>
+</body>
+</html>

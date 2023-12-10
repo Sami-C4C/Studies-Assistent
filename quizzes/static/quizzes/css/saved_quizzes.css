@@ -1,0 +1,35 @@
+/* Stile speziell für die saved_quizzes.html Seite */
+.saved-quizzes {
+    max-width: 800px; /* Maximale Breite der Quiz-Liste */
+    margin: 0 auto; /* Zentriert die Liste */
+    padding: 20px; /* Innerer Abstand */
+    background-color: #fff; /* Hintergrundfarbe */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für die Box */
+    list-style: none; /* Keine Listenpunkte */
+    padding-left: 0; /* Kein linker Abstand */
+}
+
+.saved-quizzes h1 {
+    text-align: center; /* Zentriert die Überschrift */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+.saved-quizzes li {
+    padding: 10px; /* Abstand innerhalb der Listenelemente */
+    border-bottom: 1px solid #ddd; /* Untere Grenzlinie für jedes Element */
+}
+
+.saved-quizzes li:last-child {
+    border-bottom: none; /* Keine untere Grenze für das letzte Element */
+}
+
+.saved-quizzes a {
+    color: #CC0A2F; /* Farbe der Links */
+    text-decoration: none; /* Keine Unterstreichung */
+    display: block; /* Macht den ganzen Bereich klickbar */
+}
+
+.saved-quizzes a:hover {
+    background-color: #f0f0f0; /* Hintergrundfarbe beim Überfahren */
+}

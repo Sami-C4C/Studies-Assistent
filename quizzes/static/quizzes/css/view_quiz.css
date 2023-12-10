@@ -1,0 +1,42 @@
+/* Styles for Quiz Details page */
+.quiz-details {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.question {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.question h3 {
+    margin-top: 0;
+    color: #CC0A2F;
+}
+
+.question ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.question li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
