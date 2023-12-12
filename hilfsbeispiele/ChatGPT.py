@@ -2,7 +2,7 @@
 # then import this bibleothek
 
 import openai
-openai.api_key = "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"
+openai.api_key = "YOUR_API_KEY"
 
 while True:
     question = input("Enter Question: ")

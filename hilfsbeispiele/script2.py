@@ -2,7 +2,7 @@ import openai
 
 
 def ask_openai(prompt, model="text-davinci-003", max_tokens=150):
-    openai.api_key = ' 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'
+    openai.api_key = "YOUR_API_KEY"
 
     try:
         response = openai.Completion.create(
