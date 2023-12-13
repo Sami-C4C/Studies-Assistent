@@ -2,7 +2,7 @@ import sqlite3
 import openai
 
 # Set up your API key and model
-api_key = "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"
+api_key = Your_API_KEY
 
 MODEL = "gpt-3.5-turbo"
 
